@@ -4,11 +4,13 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
              version="1.0">
 
-    <persistence-unit name="COLIBRI" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="JpaUnit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
 
-        <class>outspace.entity.Student</class>
+         <class>outspace.entity.Student</class>
+         <class>outspace.entity.StudentAddress</class>
+        <!-- <exclude-unlisted-classes>false</exclude-unlisted-classes> -->
 
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>

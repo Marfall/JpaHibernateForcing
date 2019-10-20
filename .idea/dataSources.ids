@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - hiber@localhost" uuid="740cbbc5-ac90-453e-ba3a-2143437081c0">
+  <data-source name="MySQL - hiber@localhost [2]" uuid="4a6b01fc-81d4-40f4-9af4-2796038fa6c4">
     <database-info product="MySQL" version="5.7.27-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -8,26 +8,81 @@
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="hiber"/>
-      <table id="2" parent="1" name="Student"/>
-      <column id="3" parent="2" name="id">
+      <table id="2" parent="1" name="StudentAddress"/>
+      <table id="3" parent="1" name="stud_addr"/>
+      <table id="4" parent="1" name="universityStudent"/>
+      <column id="5" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="4" parent="2" name="age">
+      <column id="6" parent="2" name="city">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="7" parent="2" name="street">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="9" parent="3" name="studId">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="5" parent="2" name="birth">
-        <data-type>datetime</data-type>
+      <column id="10" parent="3" name="addr_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
       </column>
-      <column id="6" parent="2" name="name">
+      <index id="11" parent="3" name="FK_40096994329a470e8adf9a3ada4">
+        <columns>studId</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="12" parent="3" name="FK_554e1582cdaa4764947dd8b5335">
+        <columns>addr_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="13" parent="3" name="UK_5e490481d48a4a71a53ccd44a0f">
+        <columns>addr_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="14" parent="3" name="UK_5e490481d48a4a71a53ccd44a0f">
+        <columns>addr_id</columns>
+        <underlying-index>UK_5e490481d48a4a71a53ccd44a0f</underlying-index>
+      </key>
+      <foreign-key id="15" parent="3" name="FK_40096994329a470e8adf9a3ada4">
+        <columns>studId</columns>
+        <ref-key>~.universityStudent.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="16" parent="3" name="FK_554e1582cdaa4764947dd8b5335">
+        <columns>addr_id</columns>
+        <ref-key>~.StudentAddress.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="17" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="18" parent="4" name="name">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="7" parent="2" name="PRIMARY">
+      <key id="19" parent="4" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
     </database-model>
+  </data-source>
+  <data-source name="MySQL - @localhost" uuid="71cbd337-14df-4798-8df2-49601eecdb63">
+    <database-info product="MySQL" version="5.7.27-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5"/>
   </data-source>
 </component>
