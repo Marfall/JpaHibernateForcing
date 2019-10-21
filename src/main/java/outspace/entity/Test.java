@@ -1,10 +1,9 @@
 package outspace.entity;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
-/**
- * Created by root on 20.10.19.
- */
+
 public class Test {
     public static void main(String[] args) {
         System.out.println(Enumer.valueOf("One"));
@@ -14,18 +13,37 @@ public class Test {
     }
 }
 
- enum Enumer {
-     One(1),
-     Two(2),
-     Three(3);
+// enum Enumer {
+//     One(1),
+//     Two(2),
+//     Three(3);
+//
+//     private final int name;
+//
+//     private Enumer(int s) { //приватный конструктор
+//         name = s;
+//     }
+//
+//     public int getValue() {//метод для получения значения
+//         return name;
+//     }
+//}
 
-     private final int name;
+enum Enumer {
+    One(new ArrayList<String>()),
+    Two(new ArrayList<String>()),
+    Three(new ArrayList<String>());
 
-     private Enumer(int s) { //приватный конструктор
-         name = s;
-     }
+    private final ArrayList<String> name;
 
-     public int getValue() {//метод для получения значения
-         return name;
-     }
+    private Enumer(ArrayList<String> list) { //приватный конструктор
+        name = list;
+        name.add("a");
+        name.add("b");
+        name.add("b");
+    }
+
+    public ArrayList<String> getValue() { //метод для получения значения
+        return name;
+    }
 }

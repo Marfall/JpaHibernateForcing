@@ -1,24 +1,20 @@
 package outspace.entity;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-/**
- * Created by root on 20.10.19.
- */
 @Entity
-public class StudentAddress  {
+public class StudentAddress {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     int id;
-    String city;
     String street;
+    String city;
 
     public StudentAddress() {
-        city = "myCity";
-        street = "myStreet";
+        street = "street";
+        city = "city";
     }
-
-
 }

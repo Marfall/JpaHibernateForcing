@@ -10,6 +10,7 @@
 
          <class>outspace.entity.Student</class>
          <class>outspace.entity.StudentAddress</class>
+
         <!-- <exclude-unlisted-classes>false</exclude-unlisted-classes> -->
 
         <properties>

@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - hiber@localhost [2]" uuid="4a6b01fc-81d4-40f4-9af4-2796038fa6c4">
+    <data-source name="MySQL - @localhost" uuid="a7ef7960-979b-4aee-89a4-d31d5e156732">
+      <database-info product="MySQL" version="5.7.27-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )" dbms="MYSQL" exact-version="5.7.27" exact-driver-version="5.1">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
+      <schema-mapping />
     </data-source>
-    <data-source name="MySQL - @localhost" uuid="71cbd337-14df-4798-8df2-49601eecdb63">
+    <data-source name="hiber@localhost" uuid="2033169a-d127-44d4-9a8d-43d663a5b9d1">
+      <database-info product="MySQL" version="5.7.27-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )" dbms="MYSQL" exact-version="5.7.27" exact-driver-version="5.1">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
